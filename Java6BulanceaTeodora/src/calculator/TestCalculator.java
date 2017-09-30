@@ -10,69 +10,40 @@ import java.util.*;
  */
 public class TestCalculator {
 
+    static Frame calculator = new Frame();
+    
     /**
      * Class TestCalculator tests Calculator
      * @param args the command line arguments
      */
     public static void main(String[] args) {
 
-// create a Calculator instance90
-        Calculator computer = new Calculator();
-        //start the Calculator
-        computer.start();
-        //test the add of 123 * 223
-        computer.add();//metoda add va citi din consola operanzii - daca nu pun parametri
-        //test 233 - 122
-        computer.decrease();
-        // test 123 * 12
-        computer.multiply();
-        //test 24:6
-        computer.divide();
+        //run the computer
+        calculator.start();
         
-        int numar1;
-        int numar2;
-        String operator;
-       
-       Scanner numeric = new Scanner(System.in);
-       
-       System.out.println("Please introduce your first number:");
-       numar1 = Integer.parseInt(numeric.nextLine());
-       
-       System.out.println(" Please introduce operator(+/-/*//)");
-       operator = numeric.nextLine();
-       
-       System.out.println("Please introduce second number:");
-       numar2 = Integer.parseInt(numeric.nextLine());
-       
-       System.out.println("=");
-       
-       
-       switch(operator){
-       
-           case "+":
-               System.out.println("Result is : " + (numar1 + numar2));
-           break;
-           
-           case "-":
-               System.out.println("Result is: " + (numar1 - numar2));
-           break;
-           
-           case "*":
-                System.out.println("Result is: " + (numar1 * numar2));
-           break;
-           
-           case "/":
-               System.out.println("Result is: " + (numar1 / numar2));
-           break;
-           
-           default:
-               System.out.println("Sorry, you introduced wrong data. I quit :)");
-           return;
-       
-       }
-     
-       
-       }
+        //read first operand on a line (enter confirms the number is ready)
+        calculator.displayMessageOnScreen("Please insert your first operand: ");
+        
+        //read first operand
+        calculator.pushButtonsForOperand();
+        
+        //read operator
+        calculator.displayMessageOnScreen("Please insert the operator: ");
+        
+        //read operation
+        calculator.pushButtonForOperator();
+        
+        //read second operand on a line (enter confirms the number is ready)
+        calculator.displayMessageOnScreen("Please insert your second operand: ");
+        
+        //read the second operand
+        calculator.pushButtonsForOperand();
+        
+        //read =
+        calculator.displayMessageOnScreen("Please insert = : ");
+        
+        //please push =
+        calculator.pushButtonEqual();;
     }
-    
+}
 
