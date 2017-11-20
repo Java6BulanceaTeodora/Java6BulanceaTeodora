@@ -6,6 +6,8 @@ package exceptii;
 
 import java.util.Scanner;
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -18,7 +20,7 @@ public class TestFile {
      * @param args the command line arguments
      * @throws java.io.IOException
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         // TODO code application logic here
         BufferedWriter output = null;
         
@@ -29,13 +31,25 @@ public class TestFile {
  
             try{
               File file = new File("Tema Exceptions");
-              output = new BufferedWriter(new FileWriter(file));
-              output.write(text);
+            try {
+                output = new BufferedWriter(new FileWriter(file));
+            } catch (IOException ex) {
+                Logger.getLogger(TestFile.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            try {
+                output.write(text);
+            } catch (IOException ex) {
+                Logger.getLogger(TestFile.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
             } finally{
                 
                 if (output != null){
-                    output.close();
+                    try {
+                        output.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(TestFile.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
             }   
     

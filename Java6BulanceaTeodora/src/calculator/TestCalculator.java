@@ -3,7 +3,6 @@
  */
 
 package calculator;
-import java.util.*;
 /**
  *
  * @author bulan
@@ -39,11 +38,11 @@ public class TestCalculator {
         //read the second operand
         calculator.pushButtonsForOperand();
         
-        //read =
+        //read "="
         calculator.displayMessageOnScreen("Please insert = : ");
         
-        //please push =
-        calculator.pushButtonEqual();;
+        //please push the equal sign
+        calculator.pushButtonEqual();
     }
 }
 

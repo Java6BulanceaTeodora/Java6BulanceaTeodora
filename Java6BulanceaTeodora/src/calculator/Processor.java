@@ -4,7 +4,7 @@
 package calculator;
 
 /**
- *Memorized theintroduced operands and operators and at the end computes the results
+ *Memorized the introduced operands and operators and at the end computes the results
  * @author bulan
  */
 public class Processor {
@@ -54,7 +54,7 @@ public class Processor {
     }
     
     /**
-      * Methods substracts 2 digits introduced by the user
+      * Method subtracts 2 digits introduced by the user
       */
     private Double decrease(){
         rezultat = primulOperand - alDoileaOperand;

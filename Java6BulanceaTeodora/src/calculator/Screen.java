@@ -4,7 +4,7 @@
 package calculator;
 
 /**
- *Class Screen implements behaviour of the screen
+ *Class Screen implements behavior of the screen
  * @author bulan
  */
 public class Screen {
@@ -28,8 +28,8 @@ public class Screen {
     }
     
     /**
-     * Method display specified parameter value
-     * @param deAfisat 
+     * Method display specified parameter value 
+     * @param valueToDisplay
      */
     public void display(int valueToDisplay){
         valoareAfisata = valueToDisplay;
