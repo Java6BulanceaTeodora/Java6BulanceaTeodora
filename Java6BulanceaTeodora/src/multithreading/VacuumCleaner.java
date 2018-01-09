@@ -23,12 +23,12 @@ public class VacuumCleaner extends Thread{
     }
     
     @Override
-    public void run(){
+    public  void run(){
         System.out.println("Aspiratorul este utilizat de catre barbat.");
         cleaning();
     }
     
-    private void cleaning(){
+    private synchronized void cleaning(){
         if(vcCleaning == true){
             try {
                 Thread.sleep(MIN_PRIORITY);

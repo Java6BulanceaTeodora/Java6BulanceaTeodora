@@ -20,7 +20,7 @@ public class Man extends Thread{
     }
     
     @Override
-    public synchronized void run(){
+    public void run(){
         cleaning(vc);
         watchingTv(televizor, femeie);    
     }
@@ -29,7 +29,7 @@ public class Man extends Thread{
        vc.setVcCleaning(true);
     }
     
-    private void watchingTv(Tv tv, Woman woman){
+    private synchronized void watchingTv(Tv tv, Woman woman){
        while(true){
            if(tv.isFavouriteShow() == true){
                woman.setIsSleeping(false);

@@ -11,11 +11,11 @@ public class Cigar extends Thread{
     
     
     @Override
-    public void run(){
+    public  void run(){
         burning();
     }
     
-    private void burning(){
+    private synchronized void burning(){
         System.out.println("Tigara arde.");
     }
 }

@@ -9,9 +9,9 @@ package multithreading;
  */
 public class Woman extends Thread{
    
-    private final Cigar tigara;
-    private Tv televizor;
-    private Man barbat;
+    private  final  Cigar tigara;
+    private  Tv televizor;
+    private  Man barbat;
     
     private boolean isSleeping = true;
 
@@ -24,11 +24,11 @@ public class Woman extends Thread{
     }
     
     @Override
-    public synchronized void run(){
+    public  void run(){
         sleeping();
     }
 
-    private void sleeping(){
+    private synchronized void sleeping(){
         while(true){
             if(isSleeping == false){
                 System.out.println("Femeia s-a trezit si isi urmareste emisiunea preferata.");

@@ -34,7 +34,7 @@ public class Tv extends Thread{
         }
     }
     
-    private void receiving(){
+    private synchronized void receiving(){
         while(true){
             if (favouriteShow == true){
                 System.out.println("Emisiunea preferata a inceput.");
