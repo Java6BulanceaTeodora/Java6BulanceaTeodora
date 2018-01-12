@@ -37,6 +37,7 @@ public class TestEBooksStore {
             //statement.execute("CREATE TABLE BOOK_GENRES(GENRE VARCHAR (25)PRIMARY KEY )");
             //statement.execute("CREATE TABLE EBOOKS (ISBN VARCHAR (50) PRIMARY KEY, DENUMIRE VARCHAR (50), 
 	    //			 TYPE VARCHAR (25) , PAGES INTEGER, GENRE VARCHAR (25),
+            //                   PRICE DECIMAL (5,2),
 	    //			 FOREIGN KEY (TYPE) REFERENCES BOOK_TYPES (TYPE),
 	    //			 FOREIGN KEY (GENRE) REFERENCES BOOK_GENRES (GENRE))");
             //statement.execute("CREATE TABLE BOOK_AUTHORS (CNP VARCHAR (13) PRIMARY KEY,
